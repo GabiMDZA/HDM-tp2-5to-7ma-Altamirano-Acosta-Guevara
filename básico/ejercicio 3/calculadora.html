@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3</title>
+  <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+  <div class="demo-box">
+    <div class="demo-bar">
+      <span>Ejercicio 3</span>
+    </div>
+    <div class="demo-content">
+      <div class="field-row">
+        <div class="field">
+          <label>Nombre</label>
+          <input type="text" id="m-nombre" placeholder="Jason">
+        </div>
+        <div class="field">
+          <label>Tipo</label>
+          <select id="m-tipo">
+            <option value="perro">🐕 Perro</option>
+            <option value="gato">🐱 Gato</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+        <button class="btn" id="btn-crear-mascota">🎉 Crear Mascota</button>
+        <button class="btn btn-success btn-sm" id="btn-jugar">🎮 Jugar</button>
+        <button class="btn btn-sm" id="btn-comer">🍖 Comer</button>
+        <button class="btn btn-warn btn-sm" id="btn-dormir">😴 Dormir</button>
+      </div>
+      <div class="output" id="out-mascota" style="min-height:40px"></div>
+      <div class="garage" id="garage"></div>
+    </div>
+  </div>
+
+  <script src="calculadora.js"></script>
+</body>
+</html>
