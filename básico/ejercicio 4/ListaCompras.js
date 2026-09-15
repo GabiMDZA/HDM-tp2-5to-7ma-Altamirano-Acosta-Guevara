@@ -45,7 +45,7 @@ class ListaCompras {
 
   /**
    * Elimina un item de la lista por nombre
-   * @param {string} nombre - Nombre del producto a eliminar
+   * @param {string} nombre
    */
   eliminarItem(nombre) {
     const indice = this.items.findIndex(item => 
@@ -70,7 +70,7 @@ class ListaCompras {
 
   /**
    * Busca un item en la lista por nombre
-   * @param {string} nombre - Nombre del producto a buscar
+   * @param {string} nombre
    */
   buscarItem(nombre) {
     const item = this.items.find(item => 

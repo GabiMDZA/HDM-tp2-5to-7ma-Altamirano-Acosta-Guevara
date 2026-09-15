@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 6</title>
+  <link rel="stylesheet" href="herencia.css">
+</head>
+<body>
+  <div class="demo-box">
+    <div class="demo-bar">
+      <div class="dot dot-r"></div>
+      <div class="dot dot-y"></div>
+      <div class="dot dot-g"></div>
+      <span>Ejercicio 6, herencia</span>
+    </div>
+    <div class="demo-content">
+      <div class="inherit-tree" id="inherit-tree">
+        <div class="inherit-node base">
+          <div class="in-label" style="color:#5b9cff">Clase Base</div>
+          <div class="in-name">Vehiculo</div>
+          <div class="in-props">marca, modelo, año, kilometraje<br>conducir() · mostrarInfo()</div>
+        </div>
+        <div class="inherit-node child1">
+          <div class="in-label" style="color:#10b981">Hereda de Vehiculo</div>
+          <div class="in-name">Auto</div>
+          <div class="in-props">+ puertas, tipo<br>abrirMaletero() · conducir()</div>
+        </div>
+        <div class="inherit-node child2">
+          <div class="in-label" style="color:#f59e0b">Hereda de Vehiculo</div>
+          <div class="in-name">Moto</div>
+          <div class="in-props">+ cilindrada, tipo<br>hacerCaballito() · conducir()</div>
+        </div>
+        <div class="inherit-node child3">
+          <div class="in-label" style="color:#ec4899">Hereda de Vehiculo</div>
+          <div class="in-name">Camion</div>
+          <div class="in-props">+ capacidadCarga, ejes<br>cargar() · descargar() · conducir()</div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px">
+        <div class="field" style="flex:1;min-width:140px"><label>Marca</label><input id="v-marca" type="text" placeholder="Ford"></div>
+        <div class="field" style="flex:1;min-width:140px"><label>Modelo</label><input id="v-modelo" type="text" placeholder="Falcon"></div>
+        <div class="field" style="flex:1;min-width:100px"><label>Año</label><input id="v-ano" type="number" placeholder="1962"></div>
+        <div class="field" style="flex:1;min-width:140px"><label>Tipo</label>
+          <select id="v-tipo">
+            <option value="auto">🚗 Auto</option>
+            <option value="moto">🏍️ Moto</option>
+            <option value="camion">🚚 Camión</option>
+          </select>
+        </div>
+        <div class="field" style="flex:1;min-width:140px"><label>Dato Extra</label><input id="v-extra" type="text" placeholder="Puertas/Cilindrada/Carga"></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <button class="btn btn-sm" id="btn-crear-vehiculo">➕ Crear Vehículo</button>
+        <button class="btn btn-sm btn-success" id="btn-conducir">🛣️ Conducir</button>
+        <button class="btn btn-sm btn-warn" id="btn-especial">⭐ Acción Especial</button>
+        <button class="btn btn-sm btn-danger" id="btn-eliminar">🗑️ Eliminar</button>
+      </div>
+      <div class="output" id="out-vehiculo" style="min-height:60px;margin-top:12px"></div>
+      <div id="vehiculos-lista" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"></div>
+    </div>
+  </div>
+
+  <script src="herencia.js"></script>
+</body>
+</html>
