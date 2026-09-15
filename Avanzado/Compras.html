@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Online - Carrito POO</title>
+  <link rel="stylesheet" href="Compras.css">
+</head>
+<body>
+  <div class="demo-box">
+    <div class="demo-bar">
+      <div class="dot dot-r"></div>
+      <div class="dot dot-y"></div>
+      <div class="dot dot-g"></div>
+      <span>Sistema de Gestión de Carrito y Órdenes</span>
+    </div>
+
+    <div class="demo-content">
+      <!-- Datos del cliente -->
+      <div class="field-row">
+        <div class="field">
+          <label>Nombre del Cliente</label>
+          <input id="cli-nombre" type="text" value=" ">
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input id="cli-email" type="email" value=" ">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Dirección de Envío</label>
+          <input id="cli-direccion" type="text" value="Calle y número, Ciudad">
+        </div>
+        <div class="field" style="justify-content: flex-end;">
+          <button class="btn btn-sm" id="btn-crear-cliente">👤 Registrar / Cargar Cliente</button>
+        </div>
+      </div>
+
+      <!-- PRODUCTO 1: Teclado Mecánico -->
+      <div class="shop-display" id="product-card-1">
+        <div class="bd-label">Producto disponible</div>
+        <div class="bd-title" id="prod-nombre">Teclado Mecánico</div>
+        <div class="prod-details">
+          <span>Precio original: <strong id="prod-precio">$6000</strong></span>
+          <span>Descuento: <strong id="prod-descuento">10%</strong></span>
+          <span>Precio final: <strong id="prod-precio-final" style="color:#10b981;">$5400</strong></span>
+          <span>Stock disponible: <strong id="prod-stock" style="color:#fbbf24;">5</strong></span>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:12px;">
+          <button class="btn btn-success btn-sm" id="btn-agregar">➕ Agregar al carrito</button>
+          <button class="btn btn-danger btn-sm" id="btn-quitar">➖ Quitar 1 del carrito</button>
+        </div>
+      </div>
+
+      <!-- PRODUCTO 2: Mouse Snapdragon -->
+      <div class="shop-display" id="product-card-2">
+        <div class="bd-label">Producto disponible</div>
+        <div class="bd-title" id="prod-nombre-2">Mouse Snapdragon</div>
+        <div class="prod-details">
+          <span>Precio original: <strong id="prod-precio-2">$9000</strong></span>
+          <span>Descuento: <strong id="prod-descuento-2">0%</strong></span>
+          <span>Precio final: <strong id="prod-precio-final-2" style="color:#10b981;">$9000</strong></span>
+          <span>Stock disponible: <strong id="prod-stock-2" style="color:#fbbf24;">5</strong></span>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:12px;">
+          <button class="btn btn-success btn-sm" id="btn-agregar-2">➕ Agregar al carrito</button>
+          <button class="btn btn-danger btn-sm" id="btn-quitar-2">➖ Quitar 1 del carrito</button>
+        </div>
+      </div>
+
+      <!-- PRODUCTO 3: Auriculares Gamer (Nuevo) -->
+      <div class="shop-display" id="product-card-3">
+        <div class="bd-label">Producto disponible</div>
+        <div class="bd-title" id="prod-nombre-3">Auriculares Gamer</div>
+        <div class="prod-details">
+          <span>Precio original: <strong id="prod-precio-3">$4000</strong></span>
+          <span>Descuento: <strong id="prod-descuento-3">15%</strong></span>
+          <span>Precio final: <strong id="prod-precio-final-3" style="color:#10b981;">$3400</strong></span>
+          <span>Stock disponible: <strong id="prod-stock-3" style="color:#fbbf24;">3</strong></span>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:12px;">
+          <button class="btn btn-success btn-sm" id="btn-agregar-3">➕ Agregar al carrito</button>
+          <button class="btn btn-danger btn-sm" id="btn-quitar-3">➖ Quitar 1 del carrito</button>
+        </div>
+      </div>
+
+      <!-- Resumen del carrito -->
+      <div class="cart-box">
+        <div class="bd-label">Estado del Carrito</div>
+        <div id="cart-info" style="margin-top: 8px; font-size: 14px;">El carrito está vacío.</div>
+      </div>
+
+      <!-- Botón de compra -->
+      <div style="margin-top: 16px;">
+        <button class="btn btn-sm" id="btn-comprar" style="background:#5b9cff; border-color:#3b82f6;">🛍️ Finalizar Compra</button>
+      </div>
+
+      <!-- Mensajes de estado -->
+      <div class="output" id="out-mensaje" style="min-height:40px; margin-top:12px;"></div>
+
+      <!-- Historial del cliente -->
+      <div class="order-history" style="margin-top: 16px;">
+        <div class="bd-label">Historial de Compras del Cliente</div>
+        <div class="tx-log" id="tx-log">No hay órdenes registradas.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Compras.js"></script>
+</body>
+</html>
