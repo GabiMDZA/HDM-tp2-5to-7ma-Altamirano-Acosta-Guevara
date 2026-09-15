@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3</title>
+  <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+  <div class="demo-box">
+    <span>Ejercicio 3, Calculadora</span>
+  </div>
+
+  <div class="demo-content">
+    <div class="field-row">
+      <div class="field">
+        <label>Como va la cosa</label>
+        <input type="text" id="resultado-display" readonly value="0">
+      </div>
+
+      <div class="field">
+        <label>Ingresa un número</label>
+        <input type="number" id="numero-input" placeholder="0" value="0">
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+      <button class="btn" id="btn-sumar">+</button>
+      <button class="btn" id="btn-restar">-</button>
+      <button class="btn" id="btn-multiplicar">*</button>
+      <button class="btn" id="btn-dividir">/</button>
+      <button class="btn btn-warn btn-sm" id="btn-reset">AC</button>
+    </div>
+
+    <div class="historial" id="historial"></div>
+  </div>
+
+  <script src="calculadora.js"></script>
+</body>
+</html>
