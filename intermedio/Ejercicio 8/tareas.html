@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8</title>
+  <link rel="stylesheet" href="tareas.css">
+</head>
+<body>
+  <div class="demo-box">
+    <div class="demo-bar">
+      <div class="dot dot-r"></div>
+      <div class="dot dot-y"></div>
+      <div class="dot dot-g"></div>
+      <span>Ejercicio 8, gestor de tareas con POO</span>
+    </div>
+    <div class="demo-content">
+      <div class="field-row">
+        <div class="field">
+          <label>Título</label>
+          <input id="t-titulo" type="text" placeholder="Jugar counter strike">
+        </div>
+        <div class="field">
+          <label>Prioridad</label>
+          <select id="t-prioridad">
+            <option value="alta">Alta</option>
+            <option value="media" selected>Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Descripción</label>
+          <input id="t-descripcion" type="text" placeholder="Mejorar aim y calls">
+        </div>
+        <div class="field">
+          <label>Fecha límite</label>
+          <input id="t-fecha" type="date">
+        </div>
+      </div>
+      <button class="btn btn-sm" id="btn-agregar-tarea">➕ Agregar Tarea</button>
+
+      <div class="filtros">
+        <button class="btn btn-filter active" id="filtro-todas" data-filtro="todas">Todas</button>
+        <button class="btn btn-filter" id="filtro-pendientes" data-filtro="pendientes">Pendientes</button>
+        <button class="btn btn-filter" id="filtro-completadas" data-filtro="completadas">Completadas</button>
+      </div>
+
+      <div class="tareas-lista" id="tareas-lista">
+        <div class="tareas-vacio">No hay tareas todavía</div>
+      </div>
+
+      <div class="output" id="out-tareas" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <script src="tareas.js"></script>
+</body>
+</html>
